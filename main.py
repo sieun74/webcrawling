@@ -28,7 +28,7 @@ with open("page.html", "w", encoding="utf-8") as f:
 # 뉴스 제목 크롤링
 news_list = soup.select("a.Q4Y2t_v6TP0bwxdR9avD.CL8ortS8q0ByUMOIzqrc")
 
-for i, item in enumerate(3):
+for i, item in enumerate(news_list):
     title = item.get_text(strip=True)
     link = item['href']
     print(f"{i+1}번 뉴스 제목: {title}")
